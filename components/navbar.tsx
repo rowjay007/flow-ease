@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import flow from '@/images/flow.svg'
+import flow from "@/images/flow.svg";
 const Navbar = () => {
   return (
     <nav className="px-2 bg-white border-gray-200 ">
@@ -22,13 +22,13 @@ const Navbar = () => {
         <div className="flex mr-3 md:order-2">
           <button
             type="button"
-            className="hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 "
+            className="text-transparent bg-clip-text bg-gradient-to-r from-[#0077C9] to-[#00B5E2] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 "
           >
             Sign In
           </button>
           <button
             type="button"
-            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ml-3 md:mr-0 "
+            className="text-white bg-gradient-to-r from-[#0077C9] to-[#00B5E2] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ml-3 md:mr-0 "
           >
             Get started
           </button>
