@@ -4,7 +4,7 @@ import React from "react";
 
 const Integrate = () => {
   return (
-    <div className="bg-[#F4F4F4]">
+    <div className="bg-[#fffff]">
       <section className="bg-no-repeat bg-left  bg-[url('/images/circle1.png')]">
         <h1 className="text-3xl p-12 font-bold text-[#1C1D1D] text-center capitalize group-hover:text-white lg:text-4xl ">
           Integrate with the Worlds <br />
@@ -42,7 +42,56 @@ const Integrate = () => {
                 href="#"
                 className="px-8 border border-[#0077C9] text-[#0077C9] py-3 text-lg font-semibold rounded"
               >
-                Suspendisse
+                Learn more
+                <span>
+                  <svg
+                    className="inline-block"
+                    width="25"
+                    height="25"
+                    viewBox="0 0 25 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.5 12.5H19.5"
+                      stroke="url(#paint0_linear_83_167)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M12.5 5.5L19.5 12.5L12.5 19.5"
+                      stroke="url(#paint1_linear_83_167)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_83_167"
+                        x1="8.05346"
+                        y1="12.7394"
+                        x2="8.35901"
+                        y2="14.8553"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#0077C9" />
+                        <stop offset="1" stop-color="#00B5E2" />
+                      </linearGradient>
+                      <linearGradient
+                        id="paint1_linear_83_167"
+                        x1="13.7767"
+                        y1="8.85211"
+                        x2="20.8245"
+                        y2="10.5951"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#0077C9" />
+                        <stop offset="1" stop-color="#00B5E2" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </span>
               </Link>
             </div>
           </div>
