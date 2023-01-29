@@ -6,6 +6,7 @@ import CTA from "@/components/cta";
 import Features from "@/components/features";
 import Integrate from "@/components/integrate";
 import Testimonial from "@/components/testimonial";
+import Automate from "@/components/automate";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,8 +18,8 @@ export default function Home() {
       <CTA />
       <Features />
       <Integrate />
-      <Testimonial/>
-      Homepage
+      <Testimonial />
+      <Automate />
     </div>
   );
 }
