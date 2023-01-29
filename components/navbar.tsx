@@ -5,7 +5,7 @@ import flow from "@/images/flow.svg";
 const Navbar = () => {
   return (
     <nav className="px-2 bg-white border-gray-200 ">
-      <div className="container flex flex-wrap items-center justify-between mx-auto">
+      <div className="container flex flex-wrap items-center justify-between mx-auto h-[103px]">
         <Link className="flex sm:h-10" href="/">
           <Image
             priority
