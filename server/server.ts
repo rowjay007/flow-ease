@@ -1,8 +1,9 @@
 import express from "express";
-// import router from "./router";
+import router from "./router";
 import morgan from "morgan";
 import cors from "cors";
-// import { protect } from "./modules/auth";
+import { protect } from "./modules/auth"
+  ;
 // import { createNewUser, signin } from "./handlers/user";
 
 const app = express();
@@ -18,14 +19,14 @@ app.get("/", (req, res, next) => {
   }, 1);
 });
 
-/* app.use("/api", protect, router);
+app.use("/api", protect, router);
 
-app.post("/user", createNewUser);
-app.post("/signin", signin);
+// app.post("/user", createNewUser);
+// app.post("/signin", signin);
 
-app.use((err, req, res, next) => {
-  console.log(err);
-  res.json({ message: `had an error: ${err.message}` });
-});
- */
+// app.use((err, req, res, next) => {
+//   console.log(err);
+//   res.json({ message: `had an error: ${err.message}` });
+// });
+
 export default app;
