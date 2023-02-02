@@ -5,7 +5,7 @@ import React from "react";
 const Integrate = () => {
   return (
     <div className="bg-[#fffff]">
-      <section className="bg-no-repeat bg-left  bg-[url('/images/circle1.png')]">
+      <section className="bg-no-repeat bg-left  bg-[url('/images/circle.png')]">
         <h1 className="text-3xl p-12 font-bold text-[#1C1D1D] text-center capitalize group-hover:text-white lg:text-4xl ">
           Integrate with the Worlds <br />
           leading business tools

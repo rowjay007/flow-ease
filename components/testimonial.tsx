@@ -3,7 +3,7 @@ import React from "react";
 
 const Testimonial = () => {
   return (
-    <section className="bg-no-repeat bg-right  bg-[url('/images/circle2.png')]">
+    <section className="bg-no-repeat bg-right  bg-[url('/images/circle1.png')]">
       <div className="container px-6 py-10 mx-auto ">
         <h1 className="py-24 text-2xl font-semibold text-center text-[#1C1D1D]  lg:text-5xl ">
           See what our clients say
