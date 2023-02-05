@@ -1,7 +1,14 @@
+import { Request, Response } from "express";
 import prisma from "../db";
 
+interface RequestWithUser extends Request {
+  user: {
+    id: string;
+  };
+}
+
 // Get all
-export const getProducts = async (req, res) => {
+export const getProducts = async (req: RequestWithUser, res: Response) => {
   const user = await prisma.user.findUnique({
     where: {
       id: req.user.id,
@@ -15,7 +22,7 @@ export const getProducts = async (req, res) => {
 };
 
 // Get one
-export const getOneProduct = async (req, res) => {
+export const getOneProduct = async (req: RequestWithUser, res: Response) => {
   const id = req.params.id;
 
   const product = await prisma.product.findFirst({
@@ -29,7 +36,7 @@ export const getOneProduct = async (req, res) => {
 };
 
 // Create one
-export const createProduct = async (req, res) => {
+export const createProduct = async (req: RequestWithUser, res: Response) => {
   const product = await prisma.product.create({
     data: {
       name: req.body.name,
@@ -41,7 +48,7 @@ export const createProduct = async (req, res) => {
 };
 
 // Update one
-export const updateProduct = async (req, res) => {
+export const updateProduct = async (req: RequestWithUser, res: Response) => {
   const updated = await prisma.product.update({
     where: {
       id_belongsToId: {
@@ -58,7 +65,7 @@ export const updateProduct = async (req, res) => {
 };
 
 // Delete one
-export const deleteProduct = async (req, res) => {
+export const deleteProduct = async (req: RequestWithUser, res: Response) => {
   const deleted = await prisma.product.delete({
     where: {
       id_belongsToId: {
