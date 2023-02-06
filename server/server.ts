@@ -18,14 +18,21 @@ app.get("/", (req, res, next) => {
   }, 1);
 });
 
-app.use("/api", protect, router);
+app.use("/api", protect as express.RequestHandler, router);
 
 app.post("/user", createNewUser);
 app.post("/signin", signin);
 
-app.use((err, req, res, next) => {
-  console.log(err);
-  res.json({ message: `had an error: ${err.message}` });
-});
+app.use(
+  (
+    err: Error,
+    req: express.Request,
+    res: express.Response,
+    next: express.NextFunction
+  ) => {
+    console.log(err);
+    res.json({ message: `had an error: ${err.message}` });
+  }
+);
 
 export default app;
