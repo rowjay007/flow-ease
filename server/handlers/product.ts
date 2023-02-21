@@ -9,6 +9,12 @@ interface RequestWithUser extends Request {
 
 // Get all
 export const getProducts = async (req: RequestWithUser, res: Response) => {
+  if (!req.user) {
+    return res.status(401).json({
+      error: "Unauthorized",
+    });
+  }
+
   const user = await prisma.user.findUnique({
     where: {
       id: req.user.id,
@@ -23,6 +29,12 @@ export const getProducts = async (req: RequestWithUser, res: Response) => {
 
 // Get one
 export const getOneProduct = async (req: RequestWithUser, res: Response) => {
+  if (!req.user) {
+    return res.status(401).json({
+      error: "Unauthorized",
+    });
+  }
+
   const id = req.params.id;
 
   const product = await prisma.product.findFirst({
@@ -37,6 +49,12 @@ export const getOneProduct = async (req: RequestWithUser, res: Response) => {
 
 // Create one
 export const createProduct = async (req: RequestWithUser, res: Response) => {
+  if (!req.user) {
+    return res.status(401).json({
+      error: "Unauthorized",
+    });
+  }
+
   const product = await prisma.product.create({
     data: {
       name: req.body.name,
@@ -49,6 +67,12 @@ export const createProduct = async (req: RequestWithUser, res: Response) => {
 
 // Update one
 export const updateProduct = async (req: RequestWithUser, res: Response) => {
+  if (!req.user) {
+    return res.status(401).json({
+      error: "Unauthorized",
+    });
+  }
+
   const updated = await prisma.product.update({
     where: {
       id_belongsToId: {
@@ -66,6 +90,12 @@ export const updateProduct = async (req: RequestWithUser, res: Response) => {
 
 // Delete one
 export const deleteProduct = async (req: RequestWithUser, res: Response) => {
+  if (!req.user) {
+    return res.status(401).json({
+      error: "Unauthorized",
+    });
+  }
+
   const deleted = await prisma.product.delete({
     where: {
       id_belongsToId: {
