@@ -15,17 +15,21 @@ export const getProducts = async (req: RequestWithUser, res: Response) => {
     });
   }
 
-  const user = await prisma.user.findUnique({
-    where: {
-      id: req.user.id,
-    },
-    include: {
-      products: true,
-    },
-  });
+const user = await prisma.user.findUnique({
+  where: {
+    id: req.user.id,
+  },
+  include: {
+    products: true,
+  },
+});
 
+if (user) {
   res.json({ data: user.products });
-};
+} else {
+  res.json({ data: [] });
+}
+
 
 // Get one
 export const getOneProduct = async (req: RequestWithUser, res: Response) => {
